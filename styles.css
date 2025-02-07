@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #6f4e37; /* Coffee color */
+  color: #fff5e1;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.chibi-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chibi-img:hover {
+  transform: scale(1.1) rotateY(15deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .caption {
+  opacity: 1;
+}
+
+/* Message Styles */
+.message {
+  background: rgba(255, 245, 225, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 0;
+  animation: slideIn 2s ease-in-out;
+}
+
+.love-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
